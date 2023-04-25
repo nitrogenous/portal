@@ -1,3 +1,7 @@
+# local movie and tv series portal for your entry level smart tv 
+
+# we are facing with some ssl problems with back end atm (some law enforcements)
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
