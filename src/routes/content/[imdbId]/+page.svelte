@@ -8,7 +8,7 @@
 		params: { imdbId }
 	}: any = $page;
 
-	let url = `https://4.tcp.eu.ngrok.io:14048/api/content/${imdbId}`;
+	let url = `http://4.tcp.eu.ngrok.io:14048/api/content/${imdbId}`;
 	let data: any, loading, error;
 
 	onMount(async () => {
@@ -26,17 +26,21 @@
 			<a href="/" class="landing-title"><h1>portal</h1></a>
 			<h1 class="movie-title">{$data.name}</h1>
 		</div>
-		<Player controls>
-			<Video crossorigin="" poster={$data.thumbnail}>
-				<source data-src={$data.url} />
-				{#each $data.subtitles.en as subtitle}
-					<track kind="subtitles" src={subtitle} srclang="en" label="English" />
-				{/each}
-				{#each $data.subtitles.tr as subtitle}
-					<track kind="subtitles" src={subtitle} srclang="tr" label="Turkish" />
-				{/each}
-			</Video>
-		</Player>
+		{#if $data.seasons}
+			i'm to tired to handle tv series
+		{:else}
+			<Player controls>
+				<Video crossorigin="" poster={$data.thumbnail}>
+					<source data-src={$data.url} />
+					{#each $data.subtitles.en as subtitle}
+						<track kind="subtitles" src={subtitle} srclang="en" label="English" />
+					{/each}
+					{#each $data.subtitles.tr as subtitle}
+						<track kind="subtitles" src={subtitle} srclang="tr" label="Turkish" />
+					{/each}
+				</Video>
+			</Player>
+		{/if}
 	</div>
 {/if}
 

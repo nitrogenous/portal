@@ -3,7 +3,7 @@
 	import fetchStore from '../fetch';
 	import Showcase from '../components/showcase.svelte';
 
-	let url = 'https://4.tcp.eu.ngrok.io:14048/api/contents';
+	let url = 'http://4.tcp.eu.ngrok.io:14048/api/contents';
 	let data: any, loading, error;
 
 	onMount(async () => {
