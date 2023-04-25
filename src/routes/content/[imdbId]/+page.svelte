@@ -8,7 +8,7 @@
 		params: { imdbId }
 	}: any = $page;
 
-	let url = `http://4.tcp.eu.ngrok.io:14048/api/content/${imdbId}`;
+	let url = `https://4.tcp.eu.ngrok.io:14048/api/content/${imdbId}`;
 	let data: any, loading, error;
 
 	onMount(async () => {
