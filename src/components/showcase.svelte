@@ -19,6 +19,9 @@
 		margin: 10px 15px;
 		font-size: 23px;
 		font-weight: bold;
+		text-align: center;
+		padding-bottom: 5px;
+		border-bottom: 2px solid #f4f4f5;
 	}
 
 	.showcase-wrapper {
@@ -28,5 +31,9 @@
 		border-radius: 5px;
 		flex-direction: column;
 		background-color: #27272a;
+	}
+
+	.showcase-items {
+		text-align: center;
 	}
 </style>

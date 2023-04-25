@@ -19,7 +19,7 @@
 	Error: {$error}
 {:else if $data}
 	<Showcase showcaseTitle="Movies" showcaseItems={$data.movies} />
-	<Showcase showcaseTitle="Series" showcaseItems={$data.series} />
+	<Showcase showcaseTitle="TV Series" showcaseItems={$data.series} />
 {/if}
 
 <style>
